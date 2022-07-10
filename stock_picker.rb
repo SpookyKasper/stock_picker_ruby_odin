@@ -1,11 +1,11 @@
 def stock_picker(array) 
-difference = 0
-  pair_of_days = [nil, nil]
+  difference = 0
+  pair_of_days = [0, 0]
   array.reduce() do |memo, value| 
     if value - memo > difference  
-    difference = value - memo
-    pair_of_days[0] = array.index(memo)
-    pair_of_days[1] = array.index(value)
+      difference = value - memo
+      pair_of_days[0] = array.index(memo)
+      pair_of_days[1] = array.index(value)
     end
     value > memo ? memo : value
   end
