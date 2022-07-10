@@ -1,7 +1,5 @@
-stocks_array = [47, 1, 30, 2, 8, 16, 4, 23, 1]
-
 def stock_picker(array) 
-  difference = 0
+difference = 0
   pair_of_days = [nil, nil]
   array.reduce() do |memo, value| 
     if value - memo > difference  
@@ -14,7 +12,9 @@ def stock_picker(array)
   pair_of_days
 end
 
-p stock_picker([17,3,6,9,15,8,6,1,10])
+stocks_array = [17,3,6,9,15,8,6,1,10]
+
+p stock_picker(stocks_array)
 
 
 
